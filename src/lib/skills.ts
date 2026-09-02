@@ -1,15 +1,15 @@
 import { existsSync, readFileSync } from "node:fs";
 import { basename, join } from "node:path";
-import { validateSkillMarkdown } from "./frontmatter.ts";
-import { isDirectory, listSubdirectories } from "./fs.ts";
+import { validateSkillMarkdown } from "./frontmatter.js";
+import { isDirectory, listSubdirectories } from "./fs.js";
 import {
   SKILL_FILENAME,
   getPacksRoot,
   getPersonalSkillsDir,
   getProjectSkillsDir,
   getStarterPackDir,
-} from "./paths.ts";
-import type { Diagnostic, SkillInfo, SkillScope } from "./types.ts";
+} from "./paths.js";
+import type { Diagnostic, SkillInfo, SkillScope } from "./types.js";
 
 export function discoverSkills(dir: string, scope: SkillScope): SkillInfo[] {
   if (!isDirectory(dir)) {

@@ -1,14 +1,14 @@
 import { existsSync, readFileSync } from "node:fs";
-import { parseSettingsJson, SettingsParseError, validateHooksShape } from "../lib/hooks.ts";
+import { parseSettingsJson, SettingsParseError, validateHooksShape } from "../lib/hooks.js";
 import { join } from "node:path";
-import { findClaudeMd, getPacksRoot, getProjectClaudeDir, getProjectSettingsPath } from "../lib/paths.ts";
-import { countBySeverity, formatDiagnostic, hasErrors } from "../lib/report.ts";
+import { findClaudeMd, getPacksRoot, getProjectClaudeDir, getProjectSettingsPath } from "../lib/paths.js";
+import { countBySeverity, formatDiagnostic, hasErrors } from "../lib/report.js";
 import {
   listPackSkills,
   listPersonalSkills,
   listProjectSkills,
-} from "../lib/skills.ts";
-import type { Diagnostic, SkillInfo } from "../lib/types.ts";
+} from "../lib/skills.js";
+import type { Diagnostic, SkillInfo } from "../lib/types.js";
 
 export interface DoctorOptions {
   cwd?: string;

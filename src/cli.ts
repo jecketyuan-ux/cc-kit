@@ -1,13 +1,13 @@
 import { Command } from "commander";
-import { runDoctor, printDoctorReport } from "./commands/doctor.ts";
-import { initProject, printInitResult } from "./commands/init.ts";
+import { runDoctor, printDoctorReport } from "./commands/doctor.js";
+import { initProject, printInitResult } from "./commands/init.js";
 import {
   addSkill,
   listSkills,
   printAddResult,
   removeSkill,
-} from "./commands/skill.ts";
-import { VERSION } from "./version.ts";
+} from "./commands/skill.js";
+import { VERSION } from "./version.js";
 
 const program = new Command();
 

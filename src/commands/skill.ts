@@ -1,9 +1,9 @@
 import { existsSync } from "node:fs";
 import { basename, join } from "node:path";
-import { NAME_PATTERN } from "../lib/frontmatter.ts";
-import { copySkillDirectory, isDirectory, removeDirectory } from "../lib/fs.ts";
-import { cloneGitSource, isGitSource, splitGitSource } from "../lib/git.ts";
-import { resolveUserPath, SKILL_FILENAME } from "../lib/paths.ts";
+import { NAME_PATTERN } from "../lib/frontmatter.js";
+import { copySkillDirectory, isDirectory, removeDirectory } from "../lib/fs.js";
+import { cloneGitSource, isGitSource, splitGitSource } from "../lib/git.js";
+import { resolveUserPath, SKILL_FILENAME } from "../lib/paths.js";
 import {
   findPackSkill,
   findSkillsInTree,
@@ -12,7 +12,7 @@ import {
   listProjectSkills,
   readSkill,
   skillDestination,
-} from "../lib/skills.ts";
+} from "../lib/skills.js";
 
 export interface SkillListOptions {
   cwd?: string;

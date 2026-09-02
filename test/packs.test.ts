@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { validateSkillMarkdown } from "../src/lib/frontmatter.ts";
-import { listPackSkills } from "../src/lib/skills.ts";
+import { validateSkillMarkdown } from "../src/lib/frontmatter.js";
+import { listPackSkills } from "../src/lib/skills.js";
 
 describe("starter pack", () => {
   it("ships three valid skills", () => {

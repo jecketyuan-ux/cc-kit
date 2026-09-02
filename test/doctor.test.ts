@@ -2,10 +2,10 @@ import { mkdtempSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { runDoctor } from "../src/commands/doctor.ts";
-import { initProject } from "../src/commands/init.ts";
-import { addSkill, removeSkill } from "../src/commands/skill.ts";
-import { getStarterPackDir } from "../src/lib/paths.ts";
+import { runDoctor } from "../src/commands/doctor.js";
+import { initProject } from "../src/commands/init.js";
+import { addSkill, removeSkill } from "../src/commands/skill.js";
+import { getStarterPackDir } from "../src/lib/paths.js";
 
 function tempProject(): string {
   return mkdtempSync(join(tmpdir(), "cc-kit-doctor-"));

@@ -1,5 +1,5 @@
 import { parse as parseYaml } from "yaml";
-import type { FrontmatterIssue, ParsedSkillMarkdown, SkillFrontmatter } from "./types.ts";
+import type { FrontmatterIssue, ParsedSkillMarkdown, SkillFrontmatter } from "./types.js";
 
 const FRONTMATTER_RE = /^---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)/;
 
@@ -12,6 +12,13 @@ export function extractFrontmatterBlock(content: string): {
   raw: string;
   body: string;
 } | null {
+  if (!content.startsWith("---")) {
+    return null;
+  }
+  const empty = /^---[ \t]*\r?\n---[ \t]*(?:\r?\n|$)/.exec(content);
+  if (empty) {
+    return { raw: "", body: content.slice(empty[0].length) };
+  }
   const match = FRONTMATTER_RE.exec(content);
   if (!match) {
     return null;

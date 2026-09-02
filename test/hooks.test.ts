@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseSettingsJson, SettingsParseError, validateHooksShape } from "../src/lib/hooks.ts";
+import { parseSettingsJson, SettingsParseError, validateHooksShape } from "../src/lib/hooks.js";
 
 const VALID_HOOKS = {
   SessionStart: [

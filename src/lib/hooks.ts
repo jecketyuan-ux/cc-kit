@@ -1,4 +1,4 @@
-import { HOOK_EVENTS, HOOK_HANDLER_TYPES, type Diagnostic } from "./types.ts";
+import { HOOK_EVENTS, HOOK_HANDLER_TYPES, type Diagnostic } from "./types.js";
 
 const KNOWN_EVENTS = new Set<string>(HOOK_EVENTS);
 const KNOWN_TYPES = new Set<string>(HOOK_HANDLER_TYPES);

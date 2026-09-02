@@ -1,6 +1,6 @@
-export { runDoctor } from "./commands/doctor.ts";
-export { initProject } from "./commands/init.ts";
-export { addSkill, listSkills, removeSkill } from "./commands/skill.ts";
+export { runDoctor } from "./commands/doctor.js";
+export { initProject } from "./commands/init.js";
+export { addSkill, listSkills, removeSkill } from "./commands/skill.js";
 export {
   DESCRIPTION_MAX_LENGTH,
   FrontmatterParseError,
@@ -9,23 +9,23 @@ export {
   parseSkillMarkdown,
   validateFrontmatter,
   validateSkillMarkdown,
-} from "./lib/frontmatter.ts";
+} from "./lib/frontmatter.js";
 export {
   parseSettingsJson,
   SettingsParseError,
   validateHooksShape,
-} from "./lib/hooks.ts";
+} from "./lib/hooks.js";
 export {
   findClaudeMd,
   getClaudeConfigDir,
   getPersonalSkillsDir,
   getProjectSkillsDir,
-} from "./lib/paths.ts";
-export { listPackSkills, listPersonalSkills, listProjectSkills } from "./lib/skills.ts";
-export { VERSION } from "./version.ts";
+} from "./lib/paths.js";
+export { listPackSkills, listPersonalSkills, listProjectSkills } from "./lib/skills.js";
+export { VERSION } from "./version.js";
 export type {
   Diagnostic,
   ParsedSkillMarkdown,
   SkillFrontmatter,
   SkillInfo,
-} from "./lib/types.ts";
+} from "./lib/types.js";

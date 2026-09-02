@@ -1,4 +1,4 @@
-import type { Diagnostic, Severity } from "./types.ts";
+import type { Diagnostic, Severity } from "./types.js";
 
 const MARK: Record<Severity, string> = {
   error: "✗",

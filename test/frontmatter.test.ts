@@ -4,7 +4,7 @@ import {
   parseSkillMarkdown,
   validateFrontmatter,
   validateSkillMarkdown,
-} from "../src/lib/frontmatter.ts";
+} from "../src/lib/frontmatter.js";
 
 const VALID = `---
 name: pr-review

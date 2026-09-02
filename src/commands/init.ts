@@ -1,15 +1,15 @@
 import { join } from "node:path";
-import { ensureDir, writeFileIfMissing } from "../lib/fs.ts";
+import { ensureDir, writeFileIfMissing } from "../lib/fs.js";
 import {
   CLAUDE_MD,
   findClaudeMd,
   getProjectClaudeDir,
   getProjectSettingsPath,
   getProjectSkillsDir,
-} from "../lib/paths.ts";
-import { DEFAULT_CLAUDE_MD } from "../templates/claude-md.ts";
-import { EXAMPLE_SKILL_MD, EXAMPLE_SKILL_NAME } from "../templates/example-skill.ts";
-import { DEFAULT_SETTINGS_JSON } from "../templates/settings.ts";
+} from "../lib/paths.js";
+import { DEFAULT_CLAUDE_MD } from "../templates/claude-md.js";
+import { EXAMPLE_SKILL_MD, EXAMPLE_SKILL_NAME } from "../templates/example-skill.js";
+import { DEFAULT_SETTINGS_JSON } from "../templates/settings.js";
 
 export interface InitOptions {
   cwd?: string;
